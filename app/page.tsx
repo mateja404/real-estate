@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SubHeroSection from "@/components/SubHeroSection";
+import FeaturedProperties from "@/components/FeaturedProperties";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <Navbar/>
         <HeroSection/>
         <SubHeroSection/>
+        <FeaturedProperties/>
     </div>
   );
 }
