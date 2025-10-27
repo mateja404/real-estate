@@ -153,10 +153,10 @@ function FeaturedProperties() {
                     ))}
                 </div>
                 <div className="flex flex-row items-center gap-3 absolute bottom-0 right-10">
-                    <button className="w-[50px] h-[50px] flex justify-center items-center rounded-full border-2 border-[#262626] hover:bg-[#703BF7] transition" onClick={prevSlide}>
+                    <button className="w-[50px] h-[50px] cursor-pointer flex justify-center items-center rounded-full border-2 border-[#262626] hover:bg-[#703BF7] transition" onClick={prevSlide}>
                         <Image src={"/arrowleft.svg"} alt={"arrow left"} width={20} height={20}/>
                     </button>
-                    <button className="w-[50px] h-[50px] flex justify-center items-center rounded-full border-1 border-[#262626] bg-[#1A1A1A] hover:bg-[#703BF7] transition" onClick={nextSlide}>
+                    <button className="w-[50px] h-[50px] cursor-pointer flex justify-center items-center rounded-full border-1 border-[#262626] bg-[#1A1A1A] hover:bg-[#703BF7] transition" onClick={nextSlide}>
                         <Image src={"/arrowright.svg"} alt={"arrow right"} width={20} height={20}/>
                     </button>
                 </div>
