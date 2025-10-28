@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import SubHeroSection from "@/components/SubHeroSection";
 import FeaturedProperties from "@/components/FeaturedProperties";
 import Testimonials from "@/components/Testimonials";
+import Faq from "@/components/Faq";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <SubHeroSection/>
         <FeaturedProperties/>
         <Testimonials/>
+        <Faq/>
     </div>
   );
 }

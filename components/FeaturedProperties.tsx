@@ -111,11 +111,11 @@ function FeaturedProperties() {
                 <h1 className="text-white text-5xl font-[600]">Featured Properties</h1>
                 <div className="w-full flex justify-between flex-col lg:flex-row mt-3 gap-5 lg:gap-0">
                     <p className="max-w-[800px] text-[#999999]">Explore our handpicked selection of featured properties. Each listing offers a glimpse into exceptional homes and investments available through Estatein.</p>
-                    <Link href={"#"} className="pt-4 pb-4 lg:pl-12 lg:pr-12 max-sm:w-full flex items-center justify-center cursor-pointer border border-[#262626] text-white rounded-lg">View All Properties</Link>
+                    <Link href={"#"} className="pt-4 pb-4 lg:pl-12 lg:pr-12 max-sm:w-full flex items-center justify-center cursor-pointer border border-[#262626] bg-[#1A1A1A] text-white rounded-lg">View All Properties</Link>
                 </div>
             </div>
             <div className="w-full overflow-hidden mt-10">
-                <div className="flex transition-transform duration-500 ease-in-out" style={{transform: `translateX(-${current * (100 / totalSlides)}%)`, width: `${(properties.length / cardsPerView) * 100}%`,}}>
+                <div className="flex gap-5 transition-transform duration-500 ease-in-out" style={{transform: `translateX(-${current * (100 / totalSlides)}%)`, width: `${(properties.length / cardsPerView) * 100}%`,}}>
                     {properties.map((property) => (
                         <div key={property.id} style={{ width: `${100 / properties.length}%` }} className="flex-shrink-0 px-0 lg:px-4">
                             <div className="w-full rounded-md border border-[#262626] flex flex-col pt-5 pb-5 gap-3 justify-center items-center bg-[#1A1A1A]">

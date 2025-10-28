@@ -24,19 +24,19 @@ const testimonials: Testimonials[] = [
     },
     {
         id: 1,
-        title: "Exceptional Service!",
-        description: "Our experience with Estatein was outstanding. Their team's dedication and professionalism made finding our dream home a breeze. Highly recommended!",
-        name: "Wade Warren",
-        location: "USA, California",
+        title: "Efficient and Reliable",
+        description: "Estatein provided us with top-notch service. They helped us sell our property quickly and at a great price. We couldn't be happier with the results. ",
+        name: "Emilie Thomson",
+        location: "USA, Florida",
         img: "/emeliethomson.png"
     },
     {
         id: 2,
-        title: "Exceptional Service!",
-        description: "Our experience with Estatein was outstanding. Their team's dedication and professionalism made finding our dream home a breeze. Highly recommended!",
-        name: "Wade Warren",
-        location: "USA, California",
-        img: "/emeliethomson.png"
+        title: "Trusted Advisors",
+        description: "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!",
+        name: "John Mans",
+        location: "USA, Nevada",
+        img: "/johnmans.png"
     }
 ];
 
@@ -68,7 +68,7 @@ function Testimonials() {
         if (current === 0) setCurrent(prevToFinish);
     };
     return (
-        <section className="w-full h-full flex flex-col pt-10 pb-[100px] lg:pb-[100px] pl-10 pr-10 justify-center relative items-center bg-[#141414] mt-20 overflow-hidden">
+        <section className="w-full h-full flex flex-col pt-10 pb-[100px] lg:pb-[100px] pl-5 pr-5 lg:pl-10 lg:pr-10 justify-center relative items-center bg-[#141414] mt-20 overflow-hidden">
             <div className="w-full flex flex-col gap-3">
                 <div className="flex flex-row gap-1">
                     <Image src={"/sparkle.svg"} alt={"sparkle"} width={30} height={30} />
@@ -78,11 +78,11 @@ function Testimonials() {
                 <h1 className="text-white text-5xl font-[600]">What Our Clients Say</h1>
                 <div className="w-full flex justify-between flex-col lg:flex-row mt-3 gap-5 lg:gap-0">
                     <p className="max-w-[800px] text-[#999999]">Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs.</p>
-                    <Link href={"#"} className="pt-4 pb-4 lg:pl-12 lg:pr-12 max-sm:w-full flex items-center justify-center cursor-pointer border border-[#262626] text-white rounded-lg">View All Testimonials</Link>
+                    <Link href={"#"} className="pt-4 pb-4 lg:pl-12 lg:pr-12 max-sm:w-full flex items-center justify-center cursor-pointer border border-[#262626] bg-[#1A1A1A] text-white rounded-lg">View All Testimonials</Link>
                 </div>
             </div>
             <div className="w-full overflow-hidden mt-10">
-                <div className="flex transition-transform duration-500 ease-in-out" style={{transform: `translateX(-${current * (100 / totalSlides)}%)`, width: `${(testimonials.length / cardsPerView) * 100}%`,}}>
+                <div className="flex gap-1 transition-transform duration-500 ease-in-out" style={{transform: `translateX(-${current * (100 / totalSlides)}%)`, width: `${(testimonials.length / cardsPerView) * 100}%`,}}>
                     {testimonials.map((testimonial) => (
                         <div key={testimonial.id} style={{ width: `${100 / testimonials.length}%` }} className="flex-shrink-0 px-0 lg:px-4">
                             <div className="w-full h-full flex flex-col gap-5 p-10 bg-[#141414] border-1 border-[#262626] rounded-md">
@@ -93,15 +93,17 @@ function Testimonials() {
                                     <Image src={"/star.svg"} alt="star" width={30} height={30} className="p-2 bg-[#1A1A1A] border-1 border-[#262626] rounded-full"/>
                                     <Image src={"/star.svg"} alt="star" width={30} height={30} className="p-2 bg-[#1A1A1A] border-1 border-[#262626] rounded-full"/>
                                 </div>
-                                <h2 className="text-white text-[1.5rem]">{testimonial.title}</h2>
-                                <p className="text-white text-[1rem]">{testimonial.description}</p>
+                                <div className="flex flex-col gap-2 min-h-[60%]">
+                                    <h2 className="text-white text-[1.5rem]">{testimonial.title}</h2>
+                                    <p className="text-white text-[1rem]">{testimonial.description}</p>
+                                </div>
                                 <div className="w-full flex flex-row gap-3">
                                     <div className="flex justify-center items-center">
                                         <Image src={testimonial.img} alt={testimonial.title} width={50} height={50}/>
                                     </div>
                                     <div className="flex flex-col">
-                                        <h3 className="text-white text-[1.25rem]">{testimonial.name}</h3>
-                                        <p className="text-[#999999] text-[1rem]">{testimonial.location}</p>
+                                        <h3 className="text-white text-[1.05rem]">{testimonial.name}</h3>
+                                        <p className="text-[#999999] text-[0.8rem]">{testimonial.location}</p>
                                     </div>
                                 </div>
                             </div>
