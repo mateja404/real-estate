@@ -48,6 +48,7 @@ function Testimonials() {
         const handleResize = () => {
             if (window.innerWidth < 768) setCardsPerView(1);
             else if (window.innerWidth < 1024) setCardsPerView(2);
+            else if (window.innerWidth < 1200) setCardsPerView(2);
             else setCardsPerView(3);
         };
         handleResize();
@@ -82,10 +83,10 @@ function Testimonials() {
                 </div>
             </div>
             <div className="w-full overflow-hidden mt-10">
-                <div className="flex gap-1 transition-transform duration-500 ease-in-out" style={{transform: `translateX(-${current * (100 / totalSlides)}%)`, width: `${(testimonials.length / cardsPerView) * 100}%`,}}>
+                <div className="flex gap-0 md:gap-1 transition-transform duration-500 ease-in-out" style={{transform: `translateX(-${current * (100 / totalSlides)}%)`, width: `${(testimonials.length / cardsPerView) * 100}%`,}}>
                     {testimonials.map((testimonial) => (
                         <div key={testimonial.id} style={{ width: `${100 / testimonials.length}%` }} className="flex-shrink-0 px-0 lg:px-4">
-                            <div className="w-full h-full flex flex-col gap-5 p-10 bg-[#141414] border-1 border-[#262626] rounded-md">
+                            <div className="w-[90%] mx-auto h-full flex flex-col gap-5 p-10 bg-[#141414] border-1 border-[#262626] rounded-md">
                                 <div className="flex flex-row gap-3">
                                     <Image src={"/star.svg"} alt="star" width={30} height={30} className="p-2 bg-[#1A1A1A] border-1 border-[#262626] rounded-full"/>
                                     <Image src={"/star.svg"} alt="star" width={30} height={30} className="p-2 bg-[#1A1A1A] border-1 border-[#262626] rounded-full"/>

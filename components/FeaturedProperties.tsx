@@ -19,8 +19,7 @@ const properties: Property[] = [
     {
         id: 0,
         title: "Seaside Serenity Villa",
-        description:
-            "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood",
+        description: "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood",
         bedroom: 4,
         bathroom: 3,
         property: "Villa",
@@ -30,8 +29,7 @@ const properties: Property[] = [
     {
         id: 1,
         title: "Rustic Cottage Retreat",
-        description:
-            "A cozy 3-bedroom cottage perfect for countryside living and weekend getaways",
+        description: "A cozy 3-bedroom cottage perfect for countryside living and weekend getaways",
         bedroom: 3,
         bathroom: 2,
         property: "Cottage",
@@ -41,8 +39,7 @@ const properties: Property[] = [
     {
         id: 2,
         title: "Metropolitan Haven",
-        description:
-            "A stylish modern apartment located in the heart of the city with skyline views",
+        description: "A stylish modern apartment located in the heart of the city with skyline views",
         bedroom: 2,
         bathroom: 2,
         property: "Apartment",
@@ -52,8 +49,7 @@ const properties: Property[] = [
     {
         id: 3,
         title: "Luxury Mountain Chalet",
-        description:
-            "Breathtaking 5-bedroom chalet offering panoramic mountain views and tranquility",
+        description: "Breathtaking 5-bedroom chalet offering panoramic mountain views and tranquility",
         bedroom: 5,
         bathroom: 4,
         property: "Chalet",
@@ -63,14 +59,13 @@ const properties: Property[] = [
     {
         id: 4,
         title: "Urban Studio Loft",
-        description:
-            "Compact yet luxurious studio ideal for young professionals in downtown",
+        description: "Compact yet luxurious studio ideal for young professionals in downtown",
         bedroom: 1,
         bathroom: 1,
         property: "Loft",
         price: "$250,000",
         imageUrl: "/metropolitanhaven.png",
-    },
+    }
 ];
 
 function FeaturedProperties() {
@@ -80,7 +75,8 @@ function FeaturedProperties() {
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 768) setCardsPerView(1);
-            else if (window.innerWidth < 1024) setCardsPerView(2);
+            else if (window.innerWidth < 1024) setCardsPerView(1);
+            else if (window.innerWidth < 1200) setCardsPerView(2);
             else setCardsPerView(3);
         };
         handleResize();
@@ -115,10 +111,10 @@ function FeaturedProperties() {
                 </div>
             </div>
             <div className="w-full overflow-hidden mt-10">
-                <div className="flex gap-5 transition-transform duration-500 ease-in-out" style={{transform: `translateX(-${current * (100 / totalSlides)}%)`, width: `${(properties.length / cardsPerView) * 100}%`,}}>
+                <div className="flex justify-center items-center transition-transform duration-500 ease-in-out" style={{transform: `translateX(-${current * (100 / totalSlides)}%)`, width: `${(properties.length / cardsPerView) * 100}%`,}}>
                     {properties.map((property) => (
                         <div key={property.id} style={{ width: `${100 / properties.length}%` }} className="flex-shrink-0 px-0 lg:px-4">
-                            <div className="w-full rounded-md border border-[#262626] flex flex-col pt-5 pb-5 gap-3 justify-center items-center bg-[#1A1A1A]">
+                            <div className="w-[90%] mx-auto rounded-md border border-[#262626] flex flex-col pt-5 pb-5 gap-3 justify-center items-center bg-[#1A1A1A]">
                                 <Image src={property.imageUrl} alt={property.title} width={302} height={218} className="w-[260px] h-[200px] lg:w-[302px] lg:h-[218px] mt-5 object-cover rounded"/>
                                 <div className="w-full pt-5 px-6 flex flex-col">
                                     <h1 className="text-white text-[1.25rem]">{property.title}</h1>

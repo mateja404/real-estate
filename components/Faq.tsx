@@ -73,10 +73,12 @@ function Faq() {
                 <div className="flex transition-transform gap-5 duration-500 ease-in-out justify-center items-center" style={{transform: `translateX(-${current * (100 / totalSlides)}%)`, width: `${(faqs.length / cardsPerView) * 100}%`,}}>
                     {faqs.map((faq) => (
                         <div key={faq.id} style={{ width: `${100 / faqs.length}%` }} className="flex-shrink-0 px-0 lg:px-4 relative">
-                            <div className="w-full min-h-[250px] rounded-md border border-[#262626] flex flex-col pt-10 pb-15 pl-10 pr-10 gap-5 bg-[#141414] relative">
+                            <div className="w-full h-[300px] rounded-md border border-[#262626] flex flex-col pt-10 pb-15 pl-10 pr-10 gap-5 bg-[#141414] relative">
                                 <h2 className="text-start text-white text-[1.1rem]">{faq.question}</h2>
                                 <p className="text-start text-[#999999] text-[1rem]">{faq.answer}</p>
-                                <Link href={"#"} className="pt-4 pb-4 pl-4 pr-4 lg:w-[120px] max-sm:w-full flex items-center justify-center cursor-pointer lg:absolute lg:bottom-3 border border-[#262626] bg-[#1A1A1A] text-white rounded-lg">Read More</Link>
+                                <div className="w-full flex justify-center lg:justify-start items-center absolute left-0 bottom-3 pl-3 pr-3">
+                                    <Link href={"#"} className="pt-4 pb-4 pl-4 pr-4 sm:w-[70%] w-full lg:w-[120px] max-sm:w-full flex items-center justify-center cursor-pointer border border-[#262626] bg-[#1A1A1A] text-white rounded-lg">Read More</Link>
+                                </div>
                             </div>
                         </div>
                     ))}
