@@ -6,6 +6,7 @@ import FeaturedProperties from "@/components/FeaturedProperties";
 import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
 import Prefooter from "@/components/Prefooter";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Testimonials/>
         <Faq/>
         <Prefooter/>
+        <Footer/>
     </div>
   );
 }
